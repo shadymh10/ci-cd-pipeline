@@ -4,13 +4,13 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:  # manual trigger
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-
     - name: Checkout Code
       uses: actions/checkout@v3
 
@@ -31,11 +31,11 @@ jobs:
     - name: Update Kustomization image tag
       run: |
         sed -i "s/newTag:.*/newTag: ${{ github.sha }}/" k8s/kustomization.yaml
-    
+
     - name: Commit updated manifest
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
         git add k8s/kustomization.yaml
-        git commit -m "Update image tag to ${{ github.sha }}"
+        git commit -m "Update image tag to ${{ github.sha }}" || echo "No changes to commit"
         git push
