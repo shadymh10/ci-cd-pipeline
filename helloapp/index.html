@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello App 🚀</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 40px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .objective-box {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hello from NGINX App 🚀</h1>
+        <p class="subtitle">This app is deployed using Docker, Kubernetes, CI/CD, and GitOps.</p>
+
+        <h2 class="section-title">🎯 Objective of Hello App</h2>
+        <div class="objective-box">
+            <p>
+                This simple application was created to demonstrate a full DevOps workflow:
+            </p>
+            <ul style="text-align:left; max-width:600px; margin:20px auto;">
+                <li>✔ Building a Docker image</li>
+                <li>✔ Pushing to Docker Hub</li>
+                <li>✔ Deploying with Kubernetes manifests</li>
+                <li>✔ Automating updates using GitHub Actions</li>
+                <li>✔ Managing deployments using ArgoCD (GitOps)</li>
+            </ul>
+            <p>
+                The goal is to show a clean end-to-end pipeline—from code commit to automatic deployment.
+            </p>
+        </div>
+
+        <footer>
+            © 2025 Hello App — DevOps Demo
+        </footer>
+    </div>
+</body>
+</html>
