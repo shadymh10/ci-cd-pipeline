@@ -9,4 +9,4 @@ resources:
 
 images:
   - name: shadymo/shadymh10
-    newTag: "0b97a13b460d4a49b3af9adea109f0333e798201"
+    newTag: 5ccd3181fbbe952de9931e34bb328d1d81c844c1
