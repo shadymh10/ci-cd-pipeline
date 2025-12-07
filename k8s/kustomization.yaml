@@ -4,5 +4,5 @@ resources:
 
 images:
   - name: shadymo/shadymh10
-    newTag: "latest-version"
+    newTag: 06458079e8d0be8ec7a0edce979754deaec784ea
 
