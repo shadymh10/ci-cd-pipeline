@@ -25,10 +25,12 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build -t shadymo/shadymh10:${{ github.sha }} ./helloapp
+        docker tag shadymo/shadymh10:${{ github.sha }} shadymo/shadymh10:latest
 
     - name: Push Docker Image
       run: |
         docker push shadymo/shadymh10:${{ github.sha }}
+        docker push shadymo/shadymh10:latest
 
     - name: Update Kustomization image tag
       run: |
@@ -40,4 +42,4 @@ jobs:
         git config --global user.email "github-actions@github.com"
         git add k8s/kustomization.yaml
         git commit -m "Update image tag to ${{ github.sha }}" || echo "No changes to commit"
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/shadymh10/ci-cd-pipeline.git main
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/shadymh10/ci-cd-pipeline.git main --quiet
